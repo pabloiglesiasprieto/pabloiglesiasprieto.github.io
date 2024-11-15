@@ -1,0 +1,45 @@
+#index{
+    background-color:#B5F4FF ;
+}
+#welcome{
+    font-family: Helvetica;
+}
+header{
+    display: flex;
+    background-color: #007bff;
+    border: black 1px solid;
+    border-radius: 5px;
+    justify-content: space-around;
+}
+nav a:hover{
+    background-color: white;
+    text-decoration: none;
+}
+img{
+    width: 50%;
+    border: red 10px dotted;
+    margin: auto;
+    position: relative;
+}
+
+#contenido{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+h2{
+font-size: 35px;
+}
+p{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium';
+    font-style: italic;
+}
+
+footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1%;
+}
