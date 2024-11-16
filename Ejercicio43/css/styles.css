@@ -1,45 +1,73 @@
-#index{
-    background-color:#B5F4FF ;
+#index {
+  background-color: #b5f4ff;
 }
-#welcome{
-    font-family: Helvetica;
+#welcome {
+  font-family: Helvetica;
 }
-header{
-    display: flex;
-    background-color: #007bff;
-    border: black 1px solid;
-    border-radius: 5px;
-    justify-content: space-around;
+header {
+  display: flex;
+  background-color: #007bff;
+  border: black 1px solid;
+  border-radius: 5px;
+  justify-content: space-around;
 }
-nav a:hover{
-    background-color: white;
-    text-decoration: none;
+nav a:hover {
+  background-color: white;
+  text-decoration: none;
 }
-img{
-    width: 50%;
-    border: red 10px dotted;
-    margin: auto;
-    position: relative;
+img {
+  width: 25%;
+  border: red 10px dotted;
+  margin: auto;
+  position: relative;
 }
 
-#contenido{
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+#contenido {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
-h2{
-font-size: 35px;
+h2 {
+  font-size: 35px;
 }
-p{
+p {
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium";
+  font-style: italic;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1%;
+}
+
+#divInicio a {
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.contenedorEnlace {
+  justify-content: space-evenly;
+}
+#lista{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
-    font-family: 'Franklin Gothic Medium';
-    font-style: italic;
+}
+.listaEnunciado{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    width: 20%;
 }
 
-footer{
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1%;
+#form{
+    border-radius: 5px;
+    border: red 1px solid;
+    padding: 25px;
+}
+
+.elementos{
+    border-radius: 10px;
 }
