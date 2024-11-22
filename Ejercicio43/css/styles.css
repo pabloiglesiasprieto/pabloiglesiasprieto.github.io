@@ -10,6 +10,7 @@ header {
   border: black 1px solid;
   border-radius: 5px;
   justify-content: space-around;
+  padding: 4px;
 }
 nav a:hover {
   background-color: white;
@@ -52,22 +53,60 @@ footer {
 .contenedorEnlace {
   justify-content: space-evenly;
 }
-#lista{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 20px;
+#lista {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
 }
-.listaEnunciado{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
-    width: 20%;
-}
-
-#form{
-    border-radius: 5px;
-    border: red 1px solid;
-    padding: 25px;
+.listaEnunciado {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  width: 20%;
 }
 
-.elementos{
-    border-radius: 10px;
+#form {
+  border-radius: 5px;
+  border: red 2px solid;
+  padding: 2%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../img/tenor.gif);
+  background-image: image-set(center);
+  background-size: 140px;
+  background-position: center;
+  font-size: 20px;
+}
+
+.elementos {
+  border-radius: 5px;
+  border: 1px solid grey;
+  padding: 3%;
+  font-size: 15px;
+  font-family: Verdana;
+}
+label {
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+  margin-right: 84%;
+  color: black;
+  display: flex;
+  padding: 5px;
+}
+button{
+  padding: 9px;
+  margin: auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+
+}
+textarea{
+    max-width: 94%;
+    max-height: 150px;
+    min-width: 94%;
+    min-height: 15px;
+    font-size: 15px;
+    font-family: Verdana;
 }
