@@ -4,41 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre mi</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEJXx1i+qK0czQA8lWI6X1X9zAM9f6nPB9Wm5eSR6KnsovgJNf7gJw4pA5d2h"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body id="index">
-    <header>
-      <nav>
-        <a href="Inicio.html">Inicio</a>
-        <a href="Sobre_mi.html">Sobre mí</a>
-        <a href="Contacto.html">Contacto</a>
+    <header class="bg-primary text-white py-3">
+      <nav class="container">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="Inicio.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="Sobre_mi.html">Sobre mí</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="Contacto.html">Contacto</a>
+          </li>
+        </ul>
       </nav>
     </header>
-    <h2>Sobre mí</h2>
-    <p>
-      Mi nombre es Pablo, tengo 19 años y actualmente estoy curso el ciclo
-      formátivo de grado superior de Desarrollo de Aplicaciones Multiplataforma.
-      Previamente a este curso, he cursado el ciclo formátivo de grado medio
-      'Sistemas Microinformáticos y Redes'.
-    </p>
-    <img src="../img/Perfilç.jpg" />
-    <hr />
-    <div id="lista">
-    <ul>
-      <p class="listaEnunciado">Estudios:</p>
-      <li>Educación Secundaria Obligaria.</li>
-      <li>
-        Ciclo Formátivo de Grado Medio de Sistemas Microinformáticos y Redes.
-      </li>
-    </ul>
-    <ol>
-      <p class="listaEnunciado">Tier list de patatas:</p>
-      <li>Patata Venezolana.</li>
-      <li>Patata Boliviana.</li>
-      <li>Patata Andaluza.</li>
-      <li>Patata Rumana.</li>
-      <li>Patata Valenciana.</li>
-    </ol>
+
+    <div class="container mt-4">
+      <h2 class="text-center">Sobre mí</h2>
+      <p>
+        Mi nombre es Pablo, tengo 19 años y actualmente estoy curso el ciclo
+        formátivo de grado superior de Desarrollo de Aplicaciones
+        Multiplataforma. Previamente a este curso, he cursado el ciclo formátivo
+        de grado medio 'Sistemas Microinformáticos y Redes'.
+      </p>
+      <div class="text-center">
+        <img
+          src="../img/Perfilç.jpg"
+          class="img-fluid rounded-circle"
+          alt="Foto de Perfil"
+        />
+      </div>
+      <hr />
+      <div id="lista">
+        <div class="row">
+          <div class="col-md-6">
+            <h4>Estudios:</h4>
+            <ul>
+              <li>Educación Secundaria Obligatoria</li>
+              <li>
+                Ciclo Formativo de Grado Medio de Sistemas Microinformáticos y
+                Redes
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h4>Tier list de patatas:</h4>
+            <ol>
+              <li>Patata Venezolana</li>
+              <li>Patata Boliviana</li>
+              <li>Patata Andaluza</li>
+              <li>Patata Rumana</li>
+              <li>Patata Valenciana</li>
+            </ol>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pzjw8f+ua7Kw1TIq0S9k3h5wtFEL7//51vDA5b4UktU0mx64R4U5J7xXb3jb6+qk"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
