@@ -1,8 +1,33 @@
+html{
+font-family: Verdana, Geneva, Tahoma, sans-serif;    
+background: linear-gradient(white, black
+);
+background-repeat: no-repeat;
+min-height: 100vh;
+}
+
 #activities{
-    background: linear-gradient(grey, white);
-}
-.enlaces{
-    font-family: Verdana;
+    background-color: blanchedalmond;
     padding: 1%;
-    ;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    font-size: large;
+    max-height: 50%;
+    max-width: 20%;
+    border-radius: 4%;
 }
+prueba{
+    from{background-color: blanchedalmond;}
+    to {background: radial-gradient(blue, cyan );}
+}
+#activities:hover{
+    background: radial-gradient(blue, cyan );
+    animation:prueba;
+}
+a:hover {
+    text-decoration: none;
+    color: red;
+}
+
