@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <p>Nombre</p>
+      <input id="Nombre" type="text" />
+      <br />
+      <p>Apellido</p>
+      <input id="Apellido" type="text" />
+      <br />
+      <p>Edad</p>
+      <input id="Edad" type="text" />
+      <p>Ciudad</p>
+      <input id="Ciudad" type="text" />
+      <br />
+      <br />
+      <button type="button" onclick="ejercicio()">Enviar</button>
+    </form>
+
+    <script>
+      function ejercicio() {
+        persona = obtenerValores();
+        console.log(JSON.stringify(persona));
+      }
+
+      function obtenerValores() {
+        let persona = {
+          nombre: document.getElementById("Nombre").value,
+          apellido: document.getElementById("Apellido").value,
+          edad: document.getElementById("Edad").value,
+          ciudad: document.getElementById("Ciudad").value,
+        };
+        return persona;
+      }
+    </script>
+  </body>
+</html>
