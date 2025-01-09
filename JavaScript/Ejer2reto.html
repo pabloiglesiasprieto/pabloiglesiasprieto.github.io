@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  </head>
+  <body>
+    <script>
+      $(document).ready(function () {
+        function ejercicio() {
+          persona = obtenerValores();
+
+          $("#js").append(generarTr(persona));
+        }
+
+        function obtenerValores() {
+          const persona = {
+            nombre: document.getElementById("Nombre").value,
+            apellido: document.getElementById("Apellido").value,
+            edad: document.getElementById("Edad").value,
+            ciudad: document.getElementById("Ciudad").value,
+          };
+          return persona;
+        }
+
+        $("button").click(function () {
+          ejercicio();
+        });
+
+        function generarTr(persona) {
+          return `
+        <tr>
+          <td>${persona.nombre}</td>
+          <td>${persona.apellido}</td>
+          <td>${persona.edad}</td>
+          <td>${persona.ciudad}</td>
+        </tr>
+      `;
+        }
+        $("#js").on("click", "tr", function () { $(this).remove();
+      });
+
+    });
+
+
+
+    </script>
+    <h1>HTML</h1>
+    <table border="1px solid black">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Edad</th>
+          <th>Ciudad</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+        <tr>
+          <td><input type="text" id="Nombre" /></td>
+          <td><input type="text" id="Apellido" /></td>
+          <td><input type="text" id="Edad" /></td>
+          <td><input type="text" id="Ciudad" /></td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <button type="button" id="adjuntar">Enviar</button>
+    <br />
+    <br />
+    <br />
+    <h1>JAVASCRIPT</h1>
+    <table border="1px solid black" id="js">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Edad</th>
+          <th>Ciudad</th>
+        </tr>
+      </thead>
+      <tbody id="js"></tbody>
+    </table>
+  </body>
+</html>
+      
