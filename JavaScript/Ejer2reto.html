@@ -3,29 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <script>
       $(document).ready(function () {
+        let numeroVecesEdad = 0;
+        let suma = 0;
+        let media = 0;
+        let maximo = -200000000;
+        let minimo = 200000000;
         function ejercicio() {
           persona = obtenerValores();
-          suma += parseInt(persona.edad);
-          numeroVecesEdad++;
-        media = parseInt(suma/numeroVecesEdad);
-        if (persona.edad < minimo) {
-          minimo = persona.edad;
-        }
-        if (persona.edad > maximo) {
-          maximo = persona.edad;
-        }
-        console.log("El resultado de la suma es de: " + parseInt(suma));
-        console.log("El resultado de la media es de: " + parseInt(media));
-        console.log("La edad mínima es de: " + parseInt(minimo));
-        console.log("La edad máxima es de: " + parseInt(maximo));
 
-          $("#js").append(generarTr(persona));
-          
+          suma += parseInt(persona.edad);
+
+          numeroVecesEdad++;
+
+          media = parseInt(suma / numeroVecesEdad);
+
+          if (persona.edad < minimo) {
+            minimo = persona.edad;
+          }
+          if (persona.edad > maximo) {
+            maximo = persona.edad;
+          }
+          if (
+            $("#Apellido").val() == "" ||
+            $("#Edad").val() == "" ||
+            $("#Ciudad").val() == ""
+          ) {
+            alert("Algo está vacío");
+          } else {
+            $("#js").append(generarTr(persona));
+            console.log("El resultado de la suma es de: " + parseInt(suma));
+            console.log("El resultado de la media es de: " + parseInt(media));
+            console.log("La edad mínima es de: " + parseInt(minimo));
+            console.log("La edad máxima es de: " + parseInt(maximo));
+          }
         }
 
         function obtenerValores() {
@@ -58,13 +77,6 @@
         $("#js").on("click", ".dato", function () {
           $(this).remove();
         });
-        let numeroVecesEdad = 0;
-        let suma = 0;
-        let media = 0;
-        let maximo = -200000000;
-        let minimo = 200000000;
-
-
         
       });
     </script>
