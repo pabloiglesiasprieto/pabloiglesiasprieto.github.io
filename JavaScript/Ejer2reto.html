@@ -10,8 +10,22 @@
       $(document).ready(function () {
         function ejercicio() {
           persona = obtenerValores();
+          suma += parseInt(persona.edad);
+          numeroVecesEdad++;
+        media = parseInt(suma/numeroVecesEdad);
+        if (persona.edad < minimo) {
+          minimo = persona.edad;
+        }
+        if (persona.edad > maximo) {
+          maximo = persona.edad;
+        }
+        console.log("El resultado de la suma es de: " + parseInt(suma));
+        console.log("El resultado de la media es de: " + parseInt(media));
+        console.log("La edad mínima es de: " + parseInt(minimo));
+        console.log("La edad máxima es de: " + parseInt(maximo));
 
           $("#js").append(generarTr(persona));
+          
         }
 
         function obtenerValores() {
@@ -26,11 +40,14 @@
 
         $("button").click(function () {
           ejercicio();
+          let numeroVecesEdad = 0;
+          numeroVecesEdad++;
+          return numeroVecesEdad;
         });
 
         function generarTr(persona) {
           return `
-        <tr>
+        <tr class="dato">
           <td>${persona.nombre}</td>
           <td>${persona.apellido}</td>
           <td>${persona.edad}</td>
@@ -38,9 +55,23 @@
         </tr>
       `;
         }
+<<<<<<< HEAD
         $("#js").on("click", "tr", function () {
           $(this).remove();
         });
+=======
+        $("#js").on("click", ".dato", function () {
+          $(this).remove();
+        });
+        let numeroVecesEdad = 0;
+        let suma = 0;
+        let media = 0;
+        let maximo = -200000000;
+        let minimo = 200000000;
+
+
+        
+>>>>>>> d675bb8cd9822fdab30d3e272f76044313a5fdbb
       });
     </script>
     <h1>HTML</h1>
@@ -57,7 +88,7 @@
         <tr>
           <td><input type="text" id="Nombre" /></td>
           <td><input type="text" id="Apellido" /></td>
-          <td><input type="text" id="Edad" /></td>
+          <td><input type="number" id="Edad" /></td>
           <td><input type="text" id="Ciudad" /></td>
         </tr>
       </tbody>
@@ -79,5 +110,7 @@
       </thead>
       <tbody id="js"></tbody>
     </table>
+    <br />
+    <br />
   </body>
 </html>
