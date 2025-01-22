@@ -1,12 +1,37 @@
-html{
-font-family: Verdana, Geneva, Tahoma, sans-serif;    
-background: linear-gradient(white, black
-);
-background-repeat: no-repeat;
-min-height: 100vh;
+body {
+    font-family: "Open Sans";
+    background: lightslategrey;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size: 20px;
 }
 
-#activities{
+div {
+    border: 3px solid black;
+    width: 180px;
+    border-radius: 10px;
+    height: 90px;
+    padding: 20px;
+    text-align: center;
+}
+
+div:hover {
+    background-image: linear-gradient(to right, #4e54c8, #8f94fb);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
+a:visited {
+    color: orange;
+}
+
+#activities {
     background-color: blanchedalmond;
     padding: 1%;
     display: flex;
@@ -18,16 +43,3 @@ min-height: 100vh;
     max-width: 20%;
     border-radius: 4%;
 }
-prueba{
-    from{background-color: blanchedalmond;}
-    to {background: radial-gradient(blue, cyan );}
-}
-#activities:hover{
-    background: radial-gradient(blue, cyan );
-    animation:prueba;
-}
-a:hover {
-    text-decoration: none;
-    color: red;
-}
-
