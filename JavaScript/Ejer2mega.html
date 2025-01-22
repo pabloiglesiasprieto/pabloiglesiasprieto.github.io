@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      div {
+        border: 1px solid black;
+        width: 11.1rem;
+        padding: 30px;
+        background-color: beige;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+      }
+
+      button {
+        font-size: 15px;
+        background-color: bisque;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          let array = [];
+          const persona = obtenerValores();
+          console.log(persona);
+
+          array.push(persona);
+
+          console.log(array);
+          for (i = 0; i < array.length; i++) {
+            $("#fila").append(`<td>${array[i].nombre}</td>`);
+            $("#fila").append(`<td>${array[i].apellido}</td>`);
+            $("#fila").append(`<td>${array[i].edad}</td>`);
+            $("#fila").append(`<td>${array[i].ciudad}</td>`);
+          }
+      
+
+        $("#js").on("click", "tr", function () {
+          this.remove();
+        });
+
+        function obtenerValores() {
+          const persona = {
+            nombre: $("#nombre").val(),
+            apellido: $("#apellido").val(),
+            edad: $("#edad").val(),
+            ciudad: $("#ciudad").val(),
+          };
+          return persona;
+        }
+      });
+    });
+    </script>
+  </head>
+
+  <body>
+    <h1>HTML</h1>
+    <table>
+      <thead>
+        <tr>
+          <td>Nombre</td>
+          <td>Apellido</td>
+          <td>Edad</td>
+          <td>Ciudad</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="text" id="nombre" /></td>
+          <td><input type="text" id="apellido" /></td>
+          <td><input type="text" id="edad" /></td>
+          <td><input type="text" id="ciudad" /></td>
+        </tr>
+      </tbody>
+    </table>
+    <button id="Enviar">Enviar</button>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellidos</th>
+          <th>Edad</th>
+          <th>Ciudad</th>
+        </tr>
+      </thead>
+      <tbody id="js"></tbody>
+      <tr id="fila"></tr>
+    </table>
+  </body>
+</html>
